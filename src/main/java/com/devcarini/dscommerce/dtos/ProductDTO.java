@@ -3,7 +3,6 @@ package com.devcarini.dscommerce.dtos;
 
 import com.devcarini.dscommerce.entities.Product;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
 
