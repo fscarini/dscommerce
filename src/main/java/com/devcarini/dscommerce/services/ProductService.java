@@ -14,8 +14,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Optional;
-
 @Service
 public class ProductService {
 
@@ -37,9 +35,9 @@ public class ProductService {
 
     @Transactional
     public ProductDTO insert(ProductDTO dto){
-        Product entitty = new Product(dto);
-        entitty = productRepository.save(entitty);
-        return new ProductDTO(entitty);
+        Product entity = new Product(dto);
+        entity = productRepository.save(entity);
+        return new ProductDTO(entity);
     }
 
     @Transactional
