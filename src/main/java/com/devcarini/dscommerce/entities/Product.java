@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "tb_product")
@@ -48,6 +49,10 @@ public class Product {
         this.description = dto.description();
         this.price = dto.price();
         this.imgUrl = dto.imgUrl();
+        this.categories = dto.categories()
+                .stream()
+                .map(x -> new Category(x))
+                .collect(Collectors.toSet());
     }
 
     public Set<OrderItem> getItems() {

@@ -1,6 +1,7 @@
 package com.devcarini.dscommerce.entities;
 
 
+import com.devcarini.dscommerce.dtos.CategoryDTO;
 import jakarta.persistence.*;
 
 import java.util.HashSet;
@@ -24,6 +25,10 @@ public class Category {
     public Category(Long id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public Category (CategoryDTO dto){
+        this.id = dto.id();
     }
 
     public Long getId() {
