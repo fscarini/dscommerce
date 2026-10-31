@@ -3,6 +3,7 @@ package com.devcarini.dscommerce.dtos;
 import com.devcarini.dscommerce.entities.Order;
 
 import com.devcarini.dscommerce.enums.OrderStatus;
+import jakarta.validation.constraints.NotEmpty;
 
 import java.time.Instant;
 import java.util.List;
@@ -13,6 +14,7 @@ public record OrderDTO(
         OrderStatus status,
         ClientDTO client,
         PaymentDTO payment,
+        @NotEmpty(message = "Deve ter pelo menos um produto")
         List<OrderItemDTO> items
 ) {
 

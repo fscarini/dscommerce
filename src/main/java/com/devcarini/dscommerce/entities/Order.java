@@ -40,6 +40,12 @@ public class Order {
         this.client = client;
     }
 
+    public Order(Instant moment, OrderStatus status, User client) {
+        this.moment = moment;
+        this.status = status;
+        this.client = client;
+    }
+
     public Set<OrderItem> getItems() {
         return items;
     }

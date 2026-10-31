@@ -1,5 +1,6 @@
 package com.devcarini.dscommerce.entities;
 
+import com.devcarini.dscommerce.dtos.OrderItemDTO;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
