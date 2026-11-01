@@ -136,7 +136,6 @@ public class User implements UserDetails {
         return UserDetails.super.isEnabled();
     }
 
-
     @Override
     public String toString() {
         return "User{" +
